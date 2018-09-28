@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var seconds = document.getElementById('seconds');
+            var minutes = document.getElementById('minutes');
+
+            function tickTimer() {
+                setTimeout(incrementTimer, 1000)
+            }
+            function incrementTimer() {
+                var currentSeconds = Number(seconds.innerHTML);
+                var currentMinutes = Number(minutes.innerHTML);
+
+                currentSeconds++
+
+                if (p.seconds >= 60) {
+                    currentMinutes++
+                    currentSeconds = 0
+                }
+
+                
+
+                tickTimer();
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <p id='timer'>
+                <span id="minutes">00</span> : <span id="seconds">00</span>
+            </p>
+        </div>   
+        <button>Start</button>
+        <button>Stop</button>
+    </body>
+</html>
